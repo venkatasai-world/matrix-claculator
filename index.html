@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Matrix Math Pro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <h1>📟MATRIX MATH PRO📟</h1>
+  <div class="container">
+    <div class="box">
+      <h3>Matrices</h3>
+      <ul class="options-list" id="matrix-count-options">
+        <li onclick="setMatrixCount(1)">One Matrix</li>
+        <li onclick="setMatrixCount(2)">Two Matrices</li>
+        <li onclick="setMatrixCount(3)">Three Matrices</li>
+      </ul>
+    </div>
+
+    <div class="box">
+      <h3>Matrix Size</h3>
+      <ul class="options-list" id="dimension-options"></ul>
+    </div>
+
+    <div class="box">
+      <h3>Operation</h3>
+      <ul class="options-list" id="operation-options">
+        <li onclick="setOperation('add')">Addition</li>
+        <li onclick="setOperation('subtract')">Subtraction</li>
+        <li onclick="setOperation('multiply')">Multiplication</li>
+        <li onclick="setOperation('transpose')">Transpose</li>
+        <li onclick="setOperation('determinant')">Determinant</li>
+        <li onclick="setOperation('rank')">Rank</li>
+        <li onclick="setOperation('trace')">Trace</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="matrix-area" id="matrix-area"></div>
+  <div id="error-display"></div>
+  <button id="calculate-btn" onclick="calculateResult()">Calculate Result</button>
+
+  <div class="result" id="result-display">
+    <h3>Result</h3>
+    <p>Select an operation and calculate to see the result.</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

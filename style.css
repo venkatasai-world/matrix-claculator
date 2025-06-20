@@ -1,0 +1,142 @@
+:root {
+  --primary-color: #6c63ff;
+  --secondary-color: #e3d0f7;
+  --background-gradient: linear-gradient(135deg, #e2c8fa, #f0f6ff);
+}
+h1{
+    color: #6c63ff;
+}
+
+* {
+  box-sizing: border-box;
+  transition: 0.3s ease;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--background-gradient);
+  margin: 0;
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1400px;
+  width: 95%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.box {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  width: calc(33% - 20px);
+  min-width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.box h3 {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.options-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.options-list li {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.options-list li.selected {
+  background: var(--primary-color);
+  color: #fff;
+}
+
+.matrix-area {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.matrix {
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.matrix-grid {
+  display: grid;
+  gap: 8px;
+  justify-content: center;
+}
+
+.matrix input {
+  width: 60px;
+  padding: 6px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.result {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  overflow-x: auto;
+}
+
+#error-display {
+  color: red;
+  margin-top: 10px;
+}
+
+#calculate-btn {
+  background: var(--primary-color);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#calculate-btn:hover {
+  background: #5a50cc;
+}
+
+@media (max-width: 768px) {
+  .container,
+  .box {
+    width: 100%;
+    flex-direction: column;
+  }
+}
