@@ -155,7 +155,9 @@ function calculateResult() {
 
 function formatResult(res) {
   if (typeof res === 'number') return res.toFixed(2);
-  if (Array.isArray(res)) return res.map(row => row.map(v => v.toFixed(2).padStart(6)).join(' ')).join('\\n');
+  if (Array.isArray(res)) {
+    return res.map(row => row.map(v => v.toFixed(2).padStart(6)).join(' ')).join('\n');
+  }
   return JSON.stringify(res);
 }
 
